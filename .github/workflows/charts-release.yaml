@@ -12,7 +12,7 @@ on:
 
 jobs:
   release:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     environment: build
     steps:
       - name: Generate Token
@@ -101,8 +101,8 @@ jobs:
 
   generate-summary:
     name: Auto-generate charts summary
-    runs-on: ubuntu-20.04
-    environment: bu
+    runs-on: ubuntu-latest
+    environment: build
     needs:
       - release
     steps:
