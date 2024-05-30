@@ -42,6 +42,6 @@ done
 # Run helm-docs for charts using the common library and the common library itself
 helm-docs \
     --ignore-file="${repository}/.helmdocsignore" \
-    --template-files="${readme_template}" \
-    --template-files="$(basename "${readme_config_template}")" \
+    --template-file="${readme_template}" \
+    --template-file="$(basename "${readme_config_template}")" \
     --chart-search-root="${root}"
