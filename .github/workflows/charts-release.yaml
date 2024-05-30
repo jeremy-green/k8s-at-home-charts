@@ -13,7 +13,7 @@ on:
 jobs:
   release:
     runs-on: ubuntu-20.04
-    environment: build
+    environment: bu
     steps:
       - name: Generate Token
         uses: tibdex/github-app-token@v1
@@ -39,7 +39,7 @@ jobs:
 
       - name: Install helm-docs
         run: |
-          wget -O /tmp/helm-docs.deb  https://github.com/k8s-at-home/helm-docs/releases/download/v0.1.1/helm-docs_0.1.1_Linux_x86_64.deb
+          wget -O /tmp/helm-docs.deb https://github.com/norwoodj/helm-docs/releases/download/v1.0.0/helm-docs_1.0.0_linux_amd64.deb
           sudo dpkg -i /tmp/helm-docs.deb
 
       - name: Collect changes
@@ -102,7 +102,7 @@ jobs:
   generate-summary:
     name: Auto-generate charts summary
     runs-on: ubuntu-20.04
-    environment: build
+    environment: bu
     needs:
       - release
     steps:
