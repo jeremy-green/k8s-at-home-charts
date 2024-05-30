@@ -13,6 +13,7 @@ on:
 jobs:
   release:
     runs-on: ubuntu-20.04
+    environment: build
     steps:
       - name: Generate Token
         uses: tibdex/github-app-token@v1
@@ -101,6 +102,7 @@ jobs:
   generate-summary:
     name: Auto-generate charts summary
     runs-on: ubuntu-20.04
+    environment: build
     needs:
       - release
     steps:
